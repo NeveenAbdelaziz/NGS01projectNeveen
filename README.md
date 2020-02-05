@@ -1,6 +1,6 @@
 ## Welcome to the NGS01 project repo
 
-#### Creating a repository online for the 1st time!
+### Creating a repository online for the 1st time!
 #### Navigate into the folder you want to put on Github
 #### Create a file called README.md where you can put instructions/info about your folder
 
@@ -29,24 +29,26 @@ $ git remote add origin https://github.com/quinnliu/GitCommands.git
 $ git push -u origin master # the "-u" is so that the next time your push you don't need to type "origin master"
 ```
 
-#### put in a username & password
+#### Put in a username & password
 
-#### Download reference file
-#### Install bwa
+### Download reference file
+
+### Install bwa
 
 ```
 $ conda activate ngs1
 $ conda install -c bioconda -y bwa
 ```
 
-#### Index your genome
+### Index your genome
 
 ```
 mkdir -p ~/project/fqData/NGS01projectNeveen/bwa_align/bwaIndex && cd ~/project/fqData/NGS01projectNeveen/bwa_align/bwaIndex
 ln -s ~/workdir/sample_data/dog_chr5.fa .
 bwa index -a bwtsw dog_chr5.fa
 ```
-#### Sequence alignment
+
+### Sequence alignment
 
 ```
 R1="$HOME/workdir/fqData/BD143_TGACCA_L005_R1_001.pe.fq.gz"
