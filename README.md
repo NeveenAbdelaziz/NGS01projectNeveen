@@ -1,4 +1,4 @@
-## Welcome to the NGS01 project repo
+## Welcome to my NGS01 project repo
 
 ### Creating a repository online for the 1st time!
 #### Navigate into the folder you want to put on Github
