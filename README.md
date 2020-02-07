@@ -105,7 +105,7 @@ $ conda install -c bioconda bioawk
 ### Create FASTA from BAM
 
 ```
-samtools view BD143_TGACCA_L005.bam | bioawk -c sam '{ s=$seq; if(and($flag, 16)) {s=revcomp($seq) } print ">"$qname"\n"s}' | less
+$ samtools view BD143_TGACCA_L005.bam | bioawk -c sam '{ s=$seq; if(and($flag, 16)) {s=revcomp($seq) } print ">"$qname"\n"s}' | less
 ```
 ###### >D3VG1JS1:214:C7RNWACXX:5:1101:1041:57008
 ###### NTCAGGCTGTACTGGATCATTCCTAACAGCATAGACATGTGTTGCTTTTCTCTTACCTTAAAACAAAAAACTCCAACCCCCCTTTCTTGGGCCCCATTNA
