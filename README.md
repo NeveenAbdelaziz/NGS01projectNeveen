@@ -64,3 +64,8 @@ R2="$HOME/workdir/fqData/BD143_TGACCA_L005_R2_001.pe.fq.gz"
 samtools view -h -b -S BD143_TGACCA_L005.sam > BD143_TGACCA_L005.bam
 ```
 
+### Extract only those sequences that were mapped against the reference database
+
+```
+samtools view -b -F 4 BD143_TGACCA_L005.bam > BD143_TGACCA_L005.mapped.bam
+```
