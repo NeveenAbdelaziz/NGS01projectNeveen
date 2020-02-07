@@ -56,7 +56,11 @@ R2="$HOME/workdir/fqData/BD143_TGACCA_L005_R2_001.pe.fq.gz"
 /usr/bin/time -v bwa mem bwaIndex/dog_chr5.fa $R1 $R2 > BD143_TGACCA_L005.sam
 ```
 
-### Use a program SAMstat to get statistics on our BD143_TGACCA_L005.sam file
+### Use a program SAMstat to get statistics on our BD143_TGACCA_L005.sam file????????
+
+### Convert SAM file to the binary BAM file
 
 ```
-cd bwa_align/
+samtools view -h -b -S BD143_TGACCA_L005.sam > BD143_TGACCA_L005.bam
+```
+
