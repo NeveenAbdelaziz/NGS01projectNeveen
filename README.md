@@ -31,16 +31,16 @@ $ git push -u origin master # the "-u" is so that the next time your push you do
 
 ##### Put in a username & password
 
-### Download reference file
+### To align reads download reference file
 
-### Install bwa
+#### Install bwa
 
 ```
 $ conda activate ngs1
 $ conda install -c bioconda -y bwa
 ```
 
-### Index your genome
+#### Index your genome
 
 ```
 $ mkdir -p ~/project/fqData/NGS01projectNeveen/bwa_align/bwaIndex && cd ~/project/fqData/NGS01projectNeveen/bwa_align/bwaIndex
@@ -48,7 +48,7 @@ $ ln -s ~/workdir/sample_data/dog_chr5.fa .
 $ bwa index -a bwtsw dog_chr5.fa
 ```
 
-### Sequence alignment
+#### Sequence alignment
 
 ```
 $ R1="$HOME/workdir/fqData/BD143_TGACCA_L005_R1_001.pe.fq.gz"
@@ -74,8 +74,6 @@ samtools flagstat BD143_TGACCA_L005.bam
 ###### 3910 + 0 singletons (1.61% : N/A)
 ###### 0 + 0 with mate mapped to a different chr
 ###### 0 + 0 with mate mapped to a different chr (mapQ>=5)
-
-### Use a program SAMstat to get statistics on our BD143_TGACCA_L005.sam file????????
 
 
 ### Convert SAM file to the binary BAM file
@@ -121,6 +119,7 @@ $ samtools view BD143_TGACCA_L005.bam | bioawk -c sam '{ s=$seq; if(and($flag, 1
 ###### NTAAAAGAAATAAATAGATCAATAAGTAAAGTCTTATTATTGGGAAGTGGATTGAAAATAGGAACCTTAATTTATCGTTGTATCCTACATTAGCTACTNC
 ###### >D3VG1JS1:214:C7RNWACXX:5:1101:1043:28458
 ###### CCCGGCTTTTAGAACTTATGGGTATGTGTTTAATAAGGTGATAACAGTGTTTCTTAGAATCTATGACCCACTTTATGGAGAAGAAAACGTAACCAGGAA
+
 
 ### Get %GC content from FASTA file
 
