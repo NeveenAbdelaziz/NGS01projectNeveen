@@ -1,8 +1,8 @@
-## Welcome to my NGS01 project repo
+## Welcome to my NGS01 project repository
 
-### Creating a repository online for the 1st time!
-#### Navigate into the folder you want to put on Github
-#### Create a file called README.md where you can put instructions/info about your folder
+### To Create a repository online navigate into the folder you want to put on Github
+
+##### Create a file called README.md where you can put instructions/code
 
 ```
 $ echo "# Welcome to the NGS01 project repo" > README.md
@@ -29,7 +29,7 @@ $ git remote add origin https://github.com/quinnliu/GitCommands.git
 $ git push -u origin master # the "-u" is so that the next time your push you don't need to type "origin master"
 ```
 
-#### Put in a username & password
+##### Put in a username & password
 
 ### Download reference file
 
