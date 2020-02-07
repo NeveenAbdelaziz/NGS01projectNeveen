@@ -125,5 +125,17 @@ $ samtools view BD143_TGACCA_L005.bam | bioawk -c sam '{ s=$seq; if(and($flag, 1
 ### Get %GC content from FASTA file
 
 ```
-$ bioawk -c fastx '{ print ">"$name; print gc($seq) }' data/BD143_TGACCA_L005.fa | less
+$ bioawk -c fastx '{ print ">"$name; print gc($seq) }' BD143_TGACCA_L005.fa | less
 ```
+###### >D3VG1JS1:214:C7RNWACXX:5:1101:1041:57008
+###### 0.42
+###### >D3VG1JS1:214:C7RNWACXX:5:1101:1041:57008
+###### 0.40404
+###### >D3VG1JS1:214:C7RNWACXX:5:1101:1043:28458
+###### 0.27
+###### >D3VG1JS1:214:C7RNWACXX:5:1101:1043:28458
+###### 0.373737
+###### >D3VG1JS1:214:C7RNWACXX:5:1101:1046:18828
+###### 0.21
+###### >D3VG1JS1:214:C7RNWACXX:5:1101:1046:18828
+###### 0.383838
