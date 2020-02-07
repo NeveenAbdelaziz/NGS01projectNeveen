@@ -61,19 +61,19 @@ $ /usr/bin/time -v bwa mem bwaIndex/dog_chr5.fa $R1 $R2 > BD143_TGACCA_L005.sam
 ```
 samtools flagstat BD143_TGACCA_L005.bam
 ```
-243217 + 0 in total (QC-passed reads + QC-failed reads)
-0 + 0 secondary
-309 + 0 supplementary
-0 + 0 duplicates
-239307 + 0 mapped (98.39% : N/A)
-242908 + 0 paired in sequencing
-121454 + 0 read1
-121454 + 0 read2
-234716 + 0 properly paired (96.63% : N/A)
-235088 + 0 with itself and mate mapped
-3910 + 0 singletons (1.61% : N/A)
-0 + 0 with mate mapped to a different chr
-0 + 0 with mate mapped to a different chr (mapQ>=5)
+##### 243217 + 0 in total (QC-passed reads + QC-failed reads)
+##### 0 + 0 secondary
+##### 309 + ##### 0 supplementary
+##### 0 + 0 duplicates
+##### 239307 + 0 mapped (98.39% : N/A)
+##### 242908 + 0 paired in sequencing
+##### 121454 + 0 read1
+##### 121454 + 0 read2
+##### 234716 + 0 properly paired (96.63% : N/A)
+##### 235088 + 0 with itself and mate mapped
+##### 3910 + 0 singletons (1.61% : N/A)
+##### 0 + 0 with mate mapped to a different chr
+##### 0 + 0 with mate mapped to a different chr (mapQ>=5)
 
 ### Use a program SAMstat to get statistics on our BD143_TGACCA_L005.sam file????????
 
