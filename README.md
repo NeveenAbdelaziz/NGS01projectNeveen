@@ -96,6 +96,12 @@ $ samtools view -b -F 4 BD143_TGACCA_L005.bam > BD143_TGACCA_L005.mapped.bam
 $ samtools sort BD143_TGACCA_L005.mapped.bam -o BD143_TGACCA_L005.mapped.sorted.bam
 ```
 
+### Calculate average mapping quality score of mapped reads
+
+```
+$ samtools view BD143_TGACCA_L005.mapped.sorted.bam | awk '{sum+=$5} END { print "Mean MAPQ =",sum/NR}'
+ ```
+ 
 ### Install bioawk
 
 ```
