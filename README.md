@@ -43,17 +43,17 @@ $ conda install -c bioconda -y bwa
 ### Index your genome
 
 ```
-mkdir -p ~/project/fqData/NGS01projectNeveen/bwa_align/bwaIndex && cd ~/project/fqData/NGS01projectNeveen/bwa_align/bwaIndex
-ln -s ~/workdir/sample_data/dog_chr5.fa .
-bwa index -a bwtsw dog_chr5.fa
+$ mkdir -p ~/project/fqData/NGS01projectNeveen/bwa_align/bwaIndex && cd ~/project/fqData/NGS01projectNeveen/bwa_align/bwaIndex
+$ ln -s ~/workdir/sample_data/dog_chr5.fa .
+$ bwa index -a bwtsw dog_chr5.fa
 ```
 
 ### Sequence alignment
 
 ```
-R1="$HOME/workdir/fqData/BD143_TGACCA_L005_R1_001.pe.fq.gz"
-R2="$HOME/workdir/fqData/BD143_TGACCA_L005_R2_001.pe.fq.gz"
-/usr/bin/time -v bwa mem bwaIndex/dog_chr5.fa $R1 $R2 > BD143_TGACCA_L005.sam
+$ R1="$HOME/workdir/fqData/BD143_TGACCA_L005_R1_001.pe.fq.gz"
+$ R2="$HOME/workdir/fqData/BD143_TGACCA_L005_R2_001.pe.fq.gz"
+$ /usr/bin/time -v bwa mem bwaIndex/dog_chr5.fa $R1 $R2 > BD143_TGACCA_L005.sam
 ```
 
 ### Use a program SAMstat to get statistics on our BD143_TGACCA_L005.sam file????????
@@ -61,11 +61,18 @@ R2="$HOME/workdir/fqData/BD143_TGACCA_L005_R2_001.pe.fq.gz"
 ### Convert SAM file to the binary BAM file
 
 ```
-samtools view -h -b -S BD143_TGACCA_L005.sam > BD143_TGACCA_L005.bam
+$ samtools view -h -b -S BD143_TGACCA_L005.sam > BD143_TGACCA_L005.bam
 ```
 
 ### Extract only those sequences that were mapped against the reference database
 
 ```
-samtools view -b -F 4 BD143_TGACCA_L005.bam > BD143_TGACCA_L005.mapped.bam
+$ samtools view -b -F 4 BD143_TGACCA_L005.bam > BD143_TGACCA_L005.mapped.bam
 ```
+
+### Sort BAM file
+
+```
+$ samtools sort BD143_TGACCA_L005.mapped.bam -o BD143_TGACCA_L005.mapped.sorted.bam
+```
+
