@@ -100,6 +100,8 @@ $ samtools sort BD143_TGACCA_L005.mapped.bam -o BD143_TGACCA_L005.mapped.sorted.
 $ samtools view BD143_TGACCA_L005.mapped.sorted.bam | awk '{sum+=$5} END { print "Mean MAPQ =",sum/NR}'
  ```
  
+#### Mean MAPQ = 59.6034
+
 ### Install bioawk
 
 ```
